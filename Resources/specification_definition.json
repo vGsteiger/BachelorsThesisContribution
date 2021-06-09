@@ -1,0 +1,255 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "title": "Specification",
+  "type": "object",
+  "properties": {
+    "tasks": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/task"
+      }
+    }
+  },
+  "required": [
+    "tasks"
+  ],
+  "$defs": {
+    "task": {
+      "type": "object",
+      "properties": {
+        "taskDescription": {
+          "type": "string",
+          "description": "Task description(KIS-T) / information about the video sequence (KIS-V)"
+        },
+        "taskType": {
+          "type": "string",
+          "enum": [
+            "KIST",
+            "KISV"
+          ],
+          "description": "The type of the task at hand for better classification"
+        },
+        "correctResult": {
+          "$ref": "#/$defs/correctResult"
+        },
+        "queries": {
+          "$ref": "#/$defs/Query",
+          "description": "Queries used to retrieve the data. One temporal query consists of multiple queries done in succession."
+        },
+        "timeDistances": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "description": "List of times between the queries used for the temporal scoring of closeness."
+        }
+      },
+      "required": [
+        "taskDescription",
+        "taskType",
+        "correctResult",
+        "queries"
+      ]
+    },
+    "correctResult": {
+      "type": "object",
+      "properties:": {
+        "V3C1ObjectId": {
+          "type": "string",
+          "description": "V3C1 object ID to locate the media item. ObjectId is enough because with the timestamps we can easily evaluate if a returned result is within those boundaries."
+        },
+        "start": {
+          "type": "number",
+          "description": "Start of the correct result"
+        },
+        "end": {
+          "type": "number",
+          "description": "End of the correct result"
+        }
+      },
+      "required": [
+        "V3C1ObjectId",
+        "start",
+        "end"
+      ]
+    },
+    "Query": {
+      "type": "object",
+      "properties": {
+        "containers": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/QueryContainer"
+          },
+          "description": "List of QueryContainer"
+        },
+        "config": {
+          "$ref": "#/$defs/QueryConfig"
+        }
+      },
+      "required": [
+        "containers",
+        "config"
+      ]
+    },
+    "QueryContainer": {
+      "type": "object",
+      "properties": {
+        "terms": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Term"
+          },
+          "description": "List of Terms"
+        }
+      },
+      "required": [
+        "terms"
+      ]
+    },
+    "Term": {
+      "type": "object",
+      "properties": {
+        "category": {
+          "type": "string",
+          "enum": [
+            "text",
+            "image",
+            "sketch",
+            "filter"
+          ],
+          "description": "Collection of categories to employ while searching"
+        },
+        "type": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "metadata",
+              "OCR",
+              "ASR",
+              "concept",
+              "localizedObject",
+              "caption",
+              "jointEmbedding",
+              "custom",
+              "globalFeatures",
+              "localFeatures",
+              "feedbackModel",
+              "color",
+              "edge",
+              "motion",
+              "semanticSegmentation",
+              "B/W",
+              "dominantColor",
+              "resolution",
+              "numberOfObjects"
+            ]
+          },
+          "description": "Collection of categories to employ while searching"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "category": {
+                "const": "text"
+              }
+            }
+          },
+          "then": {
+            "if": {
+              "properties": {
+                "type": {
+                  "const": "concept"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "data": {
+                  "type": "string",
+                  "description": "The query data which is in the locally normal json format as base64 string with the format data:application/json;base64,data."
+                }
+              }
+            },
+            "else": {
+              "properties": {
+                "data": {
+                  "type": "string",
+                  "description": "The query data to be queried for for example ASR or OCR as a plain string."
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "category": {
+                "const": "image"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "data": {
+                "type": "string",
+                "description": "The query data as base64 string with the format data:image/{file_format};base64,data"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "category": {
+                "const": "sketch"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "data": {
+                "type": "string",
+                "description": "The query data as base64 string with the format data:image/{file_format};base64,data"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "category": {
+                "const": "filter"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "data": {
+                "type": "string",
+                "description": "The query data which is in the locally normal json format as base64 string with the format data:application/json;base64,data."
+              }
+            }
+          }
+        }
+      ],
+      "required": [
+        "type",
+        "data"
+      ]
+    },
+    "QueryConfig": {
+      "type": "object",
+      "properties": {
+        "queryId": {
+          "type": "string",
+          "description": "Same as what was in the request if specified or else will be randomly generated"
+        }
+      },
+      "required": []
+    }
+  }
+}

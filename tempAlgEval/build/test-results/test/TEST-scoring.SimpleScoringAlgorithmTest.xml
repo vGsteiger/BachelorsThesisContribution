@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="scoring.SimpleScoringAlgorithmTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2021-05-31T13:49:39" hostname="Viktors-MacBook-Air.local" time="0.007">
+  <properties/>
+  <testcase name="parallelStageScoreTest$tempAlgEval" classname="scoring.SimpleScoringAlgorithmTest" time="0.001"/>
+  <testcase name="sanityScoreTest$tempAlgEval" classname="scoring.SimpleScoringAlgorithmTest" time="0.0"/>
+  <testcase name="extendedScoreTest$tempAlgEval" classname="scoring.SimpleScoringAlgorithmTest" time="0.001"/>
+  <testcase name="complexScoreTest3$tempAlgEval" classname="scoring.SimpleScoringAlgorithmTest" time="0.002"/>
+  <testcase name="complexScoreTest2$tempAlgEval" classname="scoring.SimpleScoringAlgorithmTest" time="0.0"/>
+  <testcase name="complexScoreTest$tempAlgEval" classname="scoring.SimpleScoringAlgorithmTest" time="0.001"/>
+  <testcase name="simpleScoreTest$tempAlgEval" classname="scoring.SimpleScoringAlgorithmTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[[Test worker] INFO scoring.SimpleScoringAlgorithmTest - OrderedResults(algorithmId=STA, results={Result(V3C1ObjectId=v_00001, startAbs=0.0, endAbs=5.0)=2.0, Result(V3C1ObjectId=v_00002, startAbs=0.0, endAbs=5.0)=1.0}, scoringTime=125202, scoringMemory=0)
+[Test worker] INFO scoring.SimpleScoringAlgorithmTest - OrderedResults(algorithmId=STA, results={Result(V3C1ObjectId=v_00001, startAbs=10.0, endAbs=15.0)=0.25, Result(V3C1ObjectId=v_00001, startAbs=0.0, endAbs=15.0)=0.75, Result(V3C1ObjectId=v_00002, startAbs=0.0, endAbs=10.0)=0.375, Result(V3C1ObjectId=v_00002, startAbs=6.0, endAbs=10.0)=0.125}, scoringTime=214934, scoringMemory=0)
+[Test worker] INFO scoring.SimpleScoringAlgorithmTest - [(Result(V3C1ObjectId=v_00003, startAbs=129.0, endAbs=140.0), 0.033333335), (Result(V3C1ObjectId=v_00002, startAbs=28.0, endAbs=30.0), 0.16666667), (Result(V3C1ObjectId=v_00001, startAbs=13.0, endAbs=24.0), 0.33333334), (Result(V3C1ObjectId=v_00003, startAbs=117.0, endAbs=140.0), 0.36666667), (Result(V3C1ObjectId=v_00001, startAbs=10.0, endAbs=24.0), 0.6666667), (Result(V3C1ObjectId=v_00001, startAbs=130.0, endAbs=140.0), 0.6666667), (Result(V3C1ObjectId=v_00001, startAbs=0.0, endAbs=24.0), 1.0), (Result(V3C1ObjectId=v_00002, startAbs=0.0, endAbs=17.0), 1.1666666), (Result(V3C1ObjectId=v_00002, startAbs=16.0, endAbs=30.0), 1.1666666), (Result(V3C1ObjectId=v_00001, startAbs=110.0, endAbs=140.0), 1.3333334), (Result(V3C1ObjectId=v_00001, startAbs=100.0, endAbs=120.0), 1.3333334), (Result(V3C1ObjectId=v_00003, startAbs=99.0, endAbs=140.0), 2.0666666)]
+]]></system-err>
+</testsuite>

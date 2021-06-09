@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="scoring.AStarScoringAlgorithmTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2021-05-31T13:49:39" hostname="Viktors-MacBook-Air.local" time="0.038">
+  <properties/>
+  <testcase name="sanityScoreTest$tempAlgEval" classname="scoring.AStarScoringAlgorithmTest" time="0.003"/>
+  <testcase name="doubleItemScoreTest$tempAlgEval" classname="scoring.AStarScoringAlgorithmTest" time="0.017"/>
+  <testcase name="extendedScoreTest$tempAlgEval" classname="scoring.AStarScoringAlgorithmTest" time="0.001"/>
+  <testcase name="complexScoreTest3$tempAlgEval" classname="scoring.AStarScoringAlgorithmTest" time="0.004"/>
+  <testcase name="complexScoreTest2$tempAlgEval" classname="scoring.AStarScoringAlgorithmTest" time="0.002"/>
+  <testcase name="complexScoreTest$tempAlgEval" classname="scoring.AStarScoringAlgorithmTest" time="0.002"/>
+  <testcase name="simpleScoreTest$tempAlgEval" classname="scoring.AStarScoringAlgorithmTest" time="0.001"/>
+  <testcase name="tripleItemScoreTest$tempAlgEval" classname="scoring.AStarScoringAlgorithmTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

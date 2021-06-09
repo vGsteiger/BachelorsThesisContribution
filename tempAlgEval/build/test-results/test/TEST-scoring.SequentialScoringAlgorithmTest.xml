@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="scoring.SequentialScoringAlgorithmTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2021-05-31T13:49:39" hostname="Viktors-MacBook-Air.local" time="0.038">
+  <properties/>
+  <testcase name="sanityScoreTest$tempAlgEval" classname="scoring.SequentialScoringAlgorithmTest" time="0.003"/>
+  <testcase name="doubleItemScoreTest$tempAlgEval" classname="scoring.SequentialScoringAlgorithmTest" time="0.017"/>
+  <testcase name="extendedScoreTest$tempAlgEval" classname="scoring.SequentialScoringAlgorithmTest" time="0.002"/>
+  <testcase name="complexScoreTest3$tempAlgEval" classname="scoring.SequentialScoringAlgorithmTest" time="0.008"/>
+  <testcase name="complexScoreTest2$tempAlgEval" classname="scoring.SequentialScoringAlgorithmTest" time="0.001"/>
+  <testcase name="complexScoreTest$tempAlgEval" classname="scoring.SequentialScoringAlgorithmTest" time="0.002"/>
+  <testcase name="simpleScoreTest$tempAlgEval" classname="scoring.SequentialScoringAlgorithmTest" time="0.002"/>
+  <testcase name="tripleItemScoreTest$tempAlgEval" classname="scoring.SequentialScoringAlgorithmTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[[Test worker] INFO scoring.SequentialScoringAlgorithmTest - doubleItemScoreTest:
+[Test worker] INFO scoring.SequentialScoringAlgorithmTest - OrderedResults(algorithmId=SQA, results={Result(V3C1ObjectId=v_00001, startAbs=0.0, endAbs=10.0)=1.0, Result(V3C1ObjectId=v_00001, startAbs=5.0, endAbs=10.0)=0.5}, scoringTime=14886448, scoringMemory=0)
+[Test worker] INFO scoring.SequentialScoringAlgorithmTest - OrderedResults(algorithmId=SQA, results={Result(V3C1ObjectId=v_00001, startAbs=0.0, endAbs=15.0)=0.75, Result(V3C1ObjectId=v_00001, startAbs=10.0, endAbs=15.0)=0.25, Result(V3C1ObjectId=v_00002, startAbs=0.0, endAbs=10.0)=0.375, Result(V3C1ObjectId=v_00002, startAbs=6.0, endAbs=10.0)=0.125}, scoringTime=1347964, scoringMemory=0)
+[Test worker] INFO scoring.SequentialScoringAlgorithmTest - complexScoreTest3:
+[Test worker] INFO scoring.SequentialScoringAlgorithmTest - [(Result(V3C1ObjectId=v_00003, startAbs=129.0, endAbs=140.0), 0.033333335), (Result(V3C1ObjectId=v_00002, startAbs=28.0, endAbs=30.0), 0.16666667), (Result(V3C1ObjectId=v_00001, startAbs=13.0, endAbs=24.0), 0.33333334), (Result(V3C1ObjectId=v_00003, startAbs=117.0, endAbs=140.0), 0.36666667), (Result(V3C1ObjectId=v_00001, startAbs=130.0, endAbs=140.0), 0.6666667), (Result(V3C1ObjectId=v_00001, startAbs=10.0, endAbs=140.0), 1.0), (Result(V3C1ObjectId=v_00002, startAbs=16.0, endAbs=30.0), 1.1666666), (Result(V3C1ObjectId=v_00001, startAbs=110.0, endAbs=140.0), 1.3333334), (Result(V3C1ObjectId=v_00002, startAbs=0.0, endAbs=30.0), 1.3333334), (Result(V3C1ObjectId=v_00001, startAbs=0.0, endAbs=140.0), 1.6666666), (Result(V3C1ObjectId=v_00001, startAbs=100.0, endAbs=140.0), 2.0), (Result(V3C1ObjectId=v_00003, startAbs=99.0, endAbs=140.0), 2.0666666)]
+[Test worker] INFO scoring.SequentialScoringAlgorithmTest - complexScoreTest2:
+[Test worker] INFO scoring.SequentialScoringAlgorithmTest - OrderedResults(algorithmId=SQA, results={Result(V3C1ObjectId=v_00001, startAbs=4.0, endAbs=140.0)=1.6666666, Result(V3C1ObjectId=v_00001, startAbs=100.0, endAbs=140.0)=2.0, Result(V3C1ObjectId=v_00001, startAbs=10.0, endAbs=140.0)=1.0, Result(V3C1ObjectId=v_00001, startAbs=110.0, endAbs=140.0)=1.3333334, Result(V3C1ObjectId=v_00001, startAbs=13.0, endAbs=24.0)=0.33333334, Result(V3C1ObjectId=v_00001, startAbs=130.0, endAbs=140.0)=0.6666667, Result(V3C1ObjectId=v_00002, startAbs=0.0, endAbs=30.0)=1.3333334, Result(V3C1ObjectId=v_00002, startAbs=16.0, endAbs=30.0)=1.1666666, Result(V3C1ObjectId=v_00002, startAbs=28.0, endAbs=30.0)=0.16666667}, scoringTime=860200, scoringMemory=0)
+[Test worker] INFO scoring.SequentialScoringAlgorithmTest - complexScoreTest:
+[Test worker] INFO scoring.SequentialScoringAlgorithmTest - OrderedResults(algorithmId=SQA, results={Result(V3C1ObjectId=v_00001, startAbs=0.0, endAbs=24.0)=1.0, Result(V3C1ObjectId=v_00001, startAbs=10.0, endAbs=24.0)=0.6666667, Result(V3C1ObjectId=v_00001, startAbs=13.0, endAbs=24.0)=0.33333334, Result(V3C1ObjectId=v_00002, startAbs=0.0, endAbs=25.0)=0.41666666, Result(V3C1ObjectId=v_00002, startAbs=6.0, endAbs=25.0)=0.25, Result(V3C1ObjectId=v_00002, startAbs=21.0, endAbs=25.0)=0.16666667}, scoringTime=373338, scoringMemory=0)
+[Test worker] INFO scoring.SequentialScoringAlgorithmTest - simpleScoreTest:
+[Test worker] INFO scoring.SequentialScoringAlgorithmTest - OrderedResults(algorithmId=SQA, results={Result(V3C1ObjectId=v_00001, startAbs=0.0, endAbs=5.0)=1.0, Result(V3C1ObjectId=v_00002, startAbs=0.0, endAbs=5.0)=0.5}, scoringTime=544755, scoringMemory=0)
+[Test worker] INFO scoring.SequentialScoringAlgorithmTest - tripleItemScoreTest:
+[Test worker] INFO scoring.SequentialScoringAlgorithmTest - OrderedResults(algorithmId=SQA, results={Result(V3C1ObjectId=v_00001, startAbs=0.0, endAbs=10.0)=1.0, Result(V3C1ObjectId=v_00001, startAbs=5.0, endAbs=10.0)=0.5, Result(V3C1ObjectId=v_00001, startAbs=100.0, endAbs=110.0)=0.5}, scoringTime=352302, scoringMemory=0)
+]]></system-err>
+</testsuite>

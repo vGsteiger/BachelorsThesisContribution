@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="efficiency.EfficiencyTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-05-31T13:49:39" hostname="Viktors-MacBook-Air.local" time="0.079">
+  <properties/>
+  <testcase name="sanityTimeTest$tempAlgEval" classname="efficiency.EfficiencyTest" time="0.079"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
