@@ -16,8 +16,8 @@ foo@bar:~$ ./gradlew run
 
 ## Resources
 
-During the thesis we referenced to evaluation results as well as a full specification file. All those files can be found in the subfolder [Results](Results/). The specification file can be read by the evaluation application. A full definition of the specification file can be seen [here](Results/specification_definition.json).
+During the thesis we referenced to evaluation results as well as a full specification file. All those files can be found in the subfolder [Resources](Resources/). The specification file can be read by the evaluation application. A full definition of the specification file can be seen [here](Resources/specification_definition.json).
 
-## Thesis
+## Thesis
 
 The thesis can be found [here](Thesis.pdf)
