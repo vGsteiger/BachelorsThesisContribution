@@ -4,6 +4,7 @@ import json.QueryResult
 import org.slf4j.LoggerFactory
 import java.net.URI
 import java.util.Collections.synchronizedList
+import java.util.concurrent.TimeUnit
 
 /**
  * Execute the queries and retrieve the results from observing the message handler of the websocket client.
@@ -16,7 +17,7 @@ class QueryExecutioner(uri: URI) {
     private val logger = LoggerFactory.getLogger(javaClass)
 
     init {
-        wsClient.connect()
+        wsClient.connectBlocking(30, TimeUnit.SECONDS)
         wsClient.messageHandler.messageObservers.add { newestMessage ->
             messageList.add(newestMessage)
         }
