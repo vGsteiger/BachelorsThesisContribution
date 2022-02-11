@@ -71,6 +71,9 @@ class QueryBuilder {
                             VBSTypes.visualtextcoembedding -> {
                                 cineastCategories.add(Categories.visualtextcoembedding)
                             }
+                            VBSTypes.segmentTags -> {
+                                cineastCategories.add(Categories.tags)
+                            }
                             else -> continue
                         }
                     }

@@ -68,7 +68,8 @@ enum class VBSTypes {
     dominantColor,
     resolution,
     numberOfObjects,
-    visualtextcoembedding
+    visualtextcoembedding,
+    segmentTags
 }
 
 enum class Categories {
