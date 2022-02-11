@@ -26,7 +26,7 @@ class QueryBuilder {
     private val logger = LoggerFactory.getLogger(javaClass)
     private val gson: Gson = Gson()
 
-    fun buildTemporalQuery(queries: List<Query>, config: QueryConfig): TemporalQuery {
+    fun buildTemporalQuery(queries: List<Query>, config: QueryConfig, maxLength: Float, timeDistances: List<Int>): TemporalQuery {
 
         val temporalQueries: MutableList<StageComponent> = mutableListOf()
 
@@ -143,6 +143,6 @@ class QueryBuilder {
             temporalQueries.add(stageComponent)
         }
 
-        return TemporalQuery(temporalQueries, config)
+        return TemporalQuery(temporalQueries, config, timeDistances, maxLength)
     }
 }
