@@ -35,7 +35,8 @@ data class SpecificationTask(
     val correctResult: Result,
     val queries: List<Query>,
     val config: QueryConfig,
-    val timeDistances: List<Int>
+    val timeDistances: List<Int> = listOf(),
+    val maxLength: Float = Float.MIN_VALUE
 ) : Model
 
 data class Result(
@@ -69,9 +70,11 @@ data class Term(
 )
 
 data class TemporalQuery(
-    val queries: List<StageComponent>,
-    val config: QueryConfig = QueryConfig(),
-    val messageType: String = TEMPORALQUERY
+        val queries: List<StageComponent>,
+        val config: QueryConfig = QueryConfig(),
+        var timeDistances: List<Int>,
+        val maxLength: Float = Float.MIN_VALUE,
+        val messageType: String = TEMPORALQUERY,
 ) : Model
 
 data class StageComponent(

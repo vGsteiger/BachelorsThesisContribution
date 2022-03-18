@@ -24,7 +24,7 @@ class QueryProcessor(uri: URI) {
     fun initiateQueries(s: List<SpecificationTask>) {
         for (task in s) {
             val query =
-                queryBuilder.buildTemporalQuery(task.queries, task.config)
+                queryBuilder.buildTemporalQuery(task.queries, task.config, task.maxLength, task.timeDistances)
             logger.info(temporalQueryParser.fromModelToJson(query))
             queryResultMap[query.config.queryId] = QueryStorage(query)
             queryExecutioner.send(
